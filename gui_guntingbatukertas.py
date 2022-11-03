@@ -1,14 +1,6 @@
 from tkinter import *
 import random
 
-outcomes = {
-    "rock":{"rock":1,"paper":0,"scissors":2},
-    "paper":{"rock":2,"paper":1,"scissors":0},
-    "scissors":{"rock":0,"paper":2,"scissors":1}
-}
-
-comp_score = 0
-player_score = 0
 
 #fungsinya 
 def converted_outcome(number):
