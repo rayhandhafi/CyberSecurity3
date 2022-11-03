@@ -1,3 +1,41 @@
+from tkinter import *
+import random
+
+#fungsinya 
+def converted_outcome(number):
+    if number == 1:
+        return "rock"
+    elif number == 2:
+        return "paper"
+    elif number == 3:
+        return "scissors"
+
+def outcome_handler(user_choice):
+    global comp_score
+    global player_score
+    random_number = random.randint(1,3)
+    computer_choice = converted_outcome(random_number)
+    outcome = outcomes[user_choice][computer_choice]
+
+    player_choice_label.config(fg="red",text="Player Choice : "+str(user_choice))
+    computer_choice_label.config(fg="green",text="Computer Choice : "+str(computer_choice))
+
+    if outcome ==2:
+        player_score = player score + 2
+        player_score_label.config(text="Player : "+str(player_score))
+        outcome_label.config(fg="blue",text="Outcome : Player Wins")
+    elif outcome ==0:
+        comp_score = comp_score +2
+        player_score_label.config(text="Computer : "+str(comp_score))
+        outcome_label.config(fg="blue",text="Outcome : Computer Wins")
+    elif outcome ==1:
+        player_score = player_score + 1
+        comp_score = comp_score + 1
+        player_score_label.config(text="Player : "+str(player_score))
+        computer_score_label.config(text="Computer : "+str(comp_score))
+        outcome_label.config(fg="blue",text="Outcome : Draw")
+    
+
 #Main Screen
 master = Tk()
 master.title("RPS")
