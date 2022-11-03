@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 
+
 #fungsinya 
 def converted_outcome(number):
     if number == 1:
@@ -21,7 +22,7 @@ def outcome_handler(user_choice):
     computer_choice_label.config(fg="green",text="Computer Choice : "+str(computer_choice))
 
     if outcome ==2:
-        player_score = player score + 2
+        player_score = player_score + 2
         player_score_label.config(text="Player : "+str(player_score))
         outcome_label.config(fg="blue",text="Outcome : Player Wins")
     elif outcome ==0:
